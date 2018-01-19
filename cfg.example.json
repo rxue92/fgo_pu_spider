@@ -1,0 +1,7 @@
+{
+  "debug": true,
+  "postgresql": {
+    "addr": "user=user password=password dbname=postgres host=localhost port=5432 sslmode=disable",
+    "maxIdle": 100
+  }
+}
