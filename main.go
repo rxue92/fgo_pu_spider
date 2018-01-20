@@ -4,8 +4,8 @@ import (
 	"flag"
 	"os"
 
-	"practice/fgospider/db"
-	"practice/fgospider/g"
+	"github.com/rxue92/fgo_pu_spider/db"
+	"github.com/rxue92/fgo_pu_spider/g"
 )
 
 func main() {

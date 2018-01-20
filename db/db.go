@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"practice/fgospider/g"
+	"github.com/rxue92/fgo_pu_spider/g"
 
 	_ "github.com/lib/pq"
 )
