@@ -3,18 +3,12 @@ package db
 import (
 	"fmt"
 	"log"
+
+	"github.com/rxue92/fgo_pu_spider/g"
 )
 
-type FGOPickUps struct {
-	RId       int    `json:"rid"`
-	Sname     string `json:"sname"`
-	Rname     string `json:"rname"`
-	Servant   string `json:"servant"`
-	Rarity    int    `json:"rarity"`
-	Timestamp int    `json:"timestamp"`
-}
 
-func Insert2FGOPU(obj FGOPickUps) {
+func Insert2FGOPU(obj g.FGOPick) {
 	sql := fmt.Sprintf(`
 	insert into fgo_up (
 		rid,

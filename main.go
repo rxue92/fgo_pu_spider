@@ -4,12 +4,13 @@ import (
 	"flag"
 	"os"
 
-	"github.com/rxue92/fgo_pu_spider/db"
+	//"github.com/rxue92/fgo_pu_spider/db"
 	"github.com/rxue92/fgo_pu_spider/g"
+	"github.com/rxue92/fgo_pu_spider/rw"
 )
 
 func main() {
-	cfg := flag.String("c", "cfg.json", "configuration file")
+	cfg := flag.String("c", "cfg.example.json", "configuration file")
 	version := flag.Bool("v", false, "show version")
 	flag.Parse()
 
@@ -19,5 +20,10 @@ func main() {
 
 	g.ParseConfig(*cfg)
 
-	db.Init()
+	//db.Init()
+
+	// TODO: 改成在配置文件中配置up从者等信息
+	rw.InitParams(false)
+
+	rw.Loop(360)
 }
